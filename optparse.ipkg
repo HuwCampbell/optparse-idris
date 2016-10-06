@@ -1,11 +1,12 @@
 package optparse
 
-opts = "-p lens -p wlpprint"
-
 modules = Options.Applicative
-        , Options.Applicative.Types
-        , Options.Applicative.Run
-        , Options.Applicative.Usage
-        , Options.Applicative.Maybe
         , Options.Applicative.Builder
+        , Options.Applicative.Chunk
+        , Options.Applicative.Maybe
+        , Options.Applicative.Run
+        , Options.Applicative.Types
+        , Options.Applicative.Usage
 
+pkgs = Control.lens
+     , Text.PrettyPrint.Leijen
