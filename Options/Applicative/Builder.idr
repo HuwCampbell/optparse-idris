@@ -137,6 +137,9 @@ arg rdr f = OptP (f $ Opt defProps (ArgReader rdr "ARG"))
 strArg : (Option ArgParams String -> Option ArgParams String) -> Parser String
 strArg = arg Right
 
+flag' : a -> (Option FlagParams a -> Option FlagParams a) -> Parser a
+flag' d f = OptP (f $ Opt defProps (FlagReader [] d))
+
 flag : (Option FlagParams Bool -> Option FlagParams a) -> Parser a
 flag f = OptP (f $ Opt defProps (FlagReader [] True))
 
